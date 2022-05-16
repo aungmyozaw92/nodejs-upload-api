@@ -3,10 +3,6 @@ add .env file
 add 
     MONGO_URL
     
-    JWT_SECRET
-    
-    JWT_LIFETIME
-    
     CLOUD_NAME
     
     CLOUD_API_KEY
