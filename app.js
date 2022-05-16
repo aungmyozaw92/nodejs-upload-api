@@ -18,6 +18,7 @@ const connectDB = require('./db/connect');
 
 // Route
 const productRouter = require('./routes/productRoutes')
+const emailRouter = require('./routes/emailRoutes');
 
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
@@ -31,7 +32,9 @@ app.get('/', (req, res) => {
   res.send('<h1>File Upload Starter</h1>');
 });
 
+app.use('/api/v1', emailRouter)
 app.use('/api/v1/products', productRouter)
+
 
 // middleware
 app.use(notFoundMiddleware);
