@@ -19,6 +19,7 @@ const connectDB = require('./db/connect');
 // Route
 const productRouter = require('./routes/productRoutes')
 const emailRouter = require('./routes/emailRoutes');
+const paymentRouter = require('./routes/paymentRoutes');
 
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
@@ -34,6 +35,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1', emailRouter)
 app.use('/api/v1/products', productRouter)
+app.use('/api/v1', paymentRouter)
 
 
 // middleware
