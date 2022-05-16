@@ -31,7 +31,7 @@ const uploadImage = async (req, res) => {
     req.files.image.tempFilePath,
     {
       use_filename: true,
-      folder: 'uploads',
+      folder: 'upload',
     }
   );
   fs.unlinkSync(req.files.image.tempFilePath);
